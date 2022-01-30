@@ -1,0 +1,6 @@
+@import "normalize.css";
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;500;600&family=Lora:wght@400;500;600&family=Satisfy&display=swap');
+@import "base/_variables";
+@import "base/_mixins";
+@import "base/_global";
+

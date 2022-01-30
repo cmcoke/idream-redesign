@@ -1,0 +1,16 @@
+/* fonts */
+$ff-josefin: 'Josefin Sans', sans-serif;
+$ff-statisy: 'Satisfy', cursive;
+$ff-lora: 'Lora', serif;
+
+/* colors */
+$clr-crayola-violet: #973179;
+$clr-sky-blue: #74b5d2;
+$clr-gold: #b9b121;
+$clr-morning-blue: #8ba189;
+$clr-purple: #9683bd;
+$clr-russian-violet: #3e0b4d;
+$clr-black: #2D2D2D;
+
+/* border radius */
+$radius: 0.2rem;
