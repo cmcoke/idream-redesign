@@ -1,0 +1,16 @@
+.container{
+  margin: 0 4%;
+
+  @mixin atMedium{
+    margin: 0 8%;
+  }
+
+  @mixin atLarge{
+    margin: 0 12%;
+  }
+
+  @mixin atXLarge{
+    margin: 0 18%;
+  }
+
+}

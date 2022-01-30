@@ -1,0 +1,197 @@
+.main-nav {
+
+  @media (max-width: 1023px) { /* 991x = 61.9375em */
+    position: relative;
+    height: 70%;
+    height: 60%;
+    top: 80%;
+    transform: translateY(-80%);
+    left: 6%;
+  }
+
+  @mixin atMedium {
+    background-color: $clr-crayola-violet;
+    padding: 1rem;
+  }
+
+  /* refers to the individual main links and thier respected drop down list */
+  &__main-list{
+    display: flex;
+    flex-direction: column;
+
+    @mixin atMedium {
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-evenly;
+      gap: .6rem;
+    }
+
+    @mixin atXLarge {
+      gap: 2rem;  
+    }
+
+  }
+
+
+  /* contains the main & sub navigation menu links */
+  &__main-item {
+    position: relative;
+    padding: .4rem 0;
+    backface-visibility: hidden;
+    transition: padding 200ms ease-in-out;
+
+    &--show{
+
+      @media (max-width: 56.1875em) { /* 899px = 56.1875em */
+        padding: .4rem 0 .8rem 0;
+      }
+
+    }
+
+    @mixin atMedium {
+      padding: .6rem 0;  
+    }
+
+    @media (min-width: 56.25em) { /* 900px = 56.25em */
+      padding: .6rem;
+      cursor: pointer;
+
+      /* creates the white animated line that appear under the menu links when hovering over them */
+      &::after {
+        content: '';
+        position: absolute;
+        bottom: .6rem;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 3px;
+        transform: scaleX(0);
+        background-color: #fff;
+        transition: transform 0.3s;
+      }
+
+      &:hover::after,
+      &:focus::after {
+        transform: scaleX(1);
+      }
+
+      /* allows for the dropdown menu links to appear when hovering over thier respected main menu links */
+      &:hover ul,
+      &:focus ul {
+        opacity: 1;
+        visibility: visible;
+      }
+
+    }
+
+    @media (min-width: 75em) { /* 75em = 1200px */
+      padding: .8rem 1rem;
+    }
+
+  }
+
+
+  /* main navigation links accordion-btn */
+  &__main-link {
+    position: relative;
+    color: $clr-black;
+    z-index: 2;
+    font-size: 17px;
+
+    @mixin atMedium {
+      color: #fff;
+      font-size: 16px;
+    }
+
+    @mixin atXLarge {
+      font-size: clamp(0.9375rem, 1vw + .2rem, 1.0625rem);
+    }
+
+  }
+
+
+  /* contains the list dropdown navigation links accordion-content */
+  &__dropdown-list {
+
+    @mixin atMedium {
+      position: absolute;
+      display: flex;
+      flex-direction: column;
+      top: 2.5rem;
+      left: -5rem;
+      width: 15rem;
+      padding: .5rem 1rem;
+      box-shadow: 0 0 10px #e1e5ee;
+      background-color: #fff;
+      border-radius: $radius;
+      gap: 0.5rem;
+      opacity: 0;
+      visibility: hidden;
+      transition: all 200ms ease-in-out;
+    }
+
+    @media (max-width: 61.9375em) { /* 61.9375em = 991px */
+      max-height: 0;
+      overflow: hidden;
+      width: 15rem;
+      padding: .2rem .5rem;
+      transition: max-height 0.2s ease-in-out;
+    }
+
+  }
+
+
+  /* individual dropdown navigation list */
+  &__dropdown-item {
+    padding: 0.5rem 0rem;
+
+    @media (min-width: 1024px) { /* 900px = 48em */
+      padding: 0.4rem 1.2rem;
+      border-radius: $radius;
+      transition: background-color 200ms ease-in-out;
+
+      /* adds a background color the dropdown menu links */
+      &:hover, &:focus {
+        background-color: #fce4ec;
+      }
+    }
+
+  }
+
+
+  /* individual dropdown navigation links */
+  &__dropdown-link {
+    font-size: 17px;
+    color: $clr-black;
+    line-height: 1.4;
+
+    @mixin atMedium {
+      font-size: 19px;
+    }
+
+    @media (min-width: 56.25rem) { /* 900px = 48em */
+      display: inline-block;
+      width: 100%;
+    }
+
+    @mixin atLarge {
+      font-size: 16px;
+    }
+
+    @mixin atXLarge {
+      font-size: clamp(0.9375rem, 1vw + 1rem, 1.0625rem);
+    }
+
+  }
+
+
+  /* the donate link on mobile screens */
+  &__donate-link-on-mobile {
+
+    @mixin atMedium {
+      display: none;
+    }
+
+  }
+
+}

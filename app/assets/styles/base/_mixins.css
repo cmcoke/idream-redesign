@@ -1,29 +1,29 @@
 @define-mixin atSmall {
-  @media (min-width: 36em){ /* 36em = 576px */
+  @media (min-width: 48em){ /* 768px */
     @mixin-content;
   }
 }
 
 @define-mixin atMedium {
-  @media (min-width: 50em){ /* 50em = 800px */
+  @media (min-width: 64em){ /* 1024px */
     @mixin-content;
   }
 }
 
 @define-mixin atLarge {
-  @media (min-width: 62em){ /* 62em = 992px */
+  @media (min-width: 85.375em){ /* 1366px */
     @mixin-content;
   }
 }
 
 @define-mixin atXLarge {
-  @media (min-width: 75em){ /* 50em = 1200px */
+  @media (min-width: 120em){ /* 1920px */
     @mixin-content;
   }
 }
 
 @define-mixin atXXLarge {
-  @media (min-width: 87.5em){ /* 87.5em = 1400px */
+  @media (min-width: 160em){ /* 2560px */
     @mixin-content;
   }
 }

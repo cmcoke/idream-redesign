@@ -1,0 +1,187 @@
+.site-header{
+  font-family: $ff-josefin;
+  padding: 20px 0;
+
+  @mixin atMedium{
+    padding: 0;
+  }
+
+  /* grid layout */
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "header__logo header__menu-icon"
+  "header__menu header__menu"
+  "header__menu header__menu"
+  "header__menu header__menu"
+  "header__menu header__menu";
+
+  @mixin atMedium {
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-areas:
+      "header__logo header__logo header__menu header__menu header__menu header__menu header__menu header__donate";
+  }
+  
+
+  /* organiztion' logo */
+  &__logo{
+    grid-area: header__logo;
+    align-self: end;
+    z-index: 7;
+
+    & img {
+      max-width: 10rem;
+
+      @mixin atXLarge {
+        max-width: 13rem;
+      }
+
+      @mixin atXXLarge {
+        max-width: 15rem;
+      }
+    }
+
+  }
+
+  /* site-header menu */
+  &__menu{
+    grid-area: header__menu;
+    align-self: center;
+
+    @media (max-width: 1023px) { /* 991x = 61.9375em */
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 255, 255, 0.9);
+      overflow: hidden; /* this prevents the menu content from appearing & disappearing on a browser reload*/
+      z-index: 5;
+      backface-visibility: hidden;
+    }
+  }
+
+  /* donate link */
+  &__donate{
+    display: none;
+
+    @mixin atMedium {
+      display: block;
+      grid-area: header__donate;
+      place-self: center;
+      background-color: $clr-gold;
+      align-self: stretch;
+      justify-self: stretch;
+      color: #fff;
+      transition: background-color 200ms ease-in-out;
+
+      /* centers the word donate */
+      display: grid;
+      place-items: center;
+      font-size: clamp(0.9375rem, 1vw + 1rem, 1.0625rem);
+    }
+
+  }
+
+  &__donate:hover,
+  &__donate:focus {
+    background-color: #aea720;
+  }
+
+  /* menu icon */
+  &__menu-icon {
+    grid-area: header__menu-icon;
+    align-self: center;
+    justify-self: end;
+    position: relative;
+    cursor: pointer;
+
+    /* positions the word 'Menu' and the mobile menu icon beside each other */
+    display: grid;
+    grid-template-columns: 5.5rem min-content;
+    align-items: center;
+
+    @mixin atMedium {
+      display: none;
+    }
+
+  }
+
+  /* the word 'Menu' which is right of the mobile menu icon */
+  &__menu-span {
+    grid-column: 1/2;
+    z-index: 5;
+    color: #fff;
+    color: black;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+
+
+  /* creates the mobile menu icon */
+  &__menu-icon__middle {
+    position: absolute;
+    top: 11%;
+    right: 0px;
+    width: 20px;
+    height: 19px;
+    z-index: 5;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 33px;
+      height: 3px;
+      /* background-color: #fff; */
+      background-color: crimson;
+      transition: transform 0.3s ease-out;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 7px;
+      right: 0px;
+      width: 33px;
+      height: 3px;
+      /* background-color: #fff; */
+      background-color: crimson;
+      transition: transform 0.3s ease-out;
+    }
+  }
+
+
+  /* mobile menu close icon */
+  &__mobile-menu-icon--close {
+    &::before {
+      top: -8px;
+      width: 29px;
+      transform: translateX(-11px) rotate(-48deg) translateY(13px);
+    }
+
+    &::after {
+      bottom: 15px;
+      width: 29px;
+      transform: translateX(-1px) rotate(42deg) translateY(1px);
+    }
+  }
+
+
+  /* overlay effect on mobile screens */
+  &__overlay {
+    @media (max-width: 1023px) { 
+      visibility: hidden;
+      opacity: 0;
+      transition: all 200ms ease-in-out;
+    }
+  }
+
+  &__overlay--open {
+    @media (max-width: 1023px) {
+      visibility: visible;
+      opacity: 1;
+    }
+  }
+
+}
