@@ -1,0 +1,37 @@
+.page-banner{
+ position: relative;
+ background-color: rgb(204, 201, 201);
+ padding: 130px 0 233px 0;
+
+ &--home{
+
+  @mixin atMedium {
+    padding-bottom: 300px;
+  }
+
+  @mixin atXLarge {
+    padding-bottom: 500px;
+  }
+
+  @mixin atXXLarge {
+    padding-bottom: 700px;
+  }
+
+ }
+
+ /* &__bg-image{
+   
+ } */
+
+
+ &__content{
+  position: absolute;
+  top:50%; /*makes the text center vertically */
+  transform: translateY(-50%); /*makes the text center vertically */
+  left: 0;
+  width: 100%; /* makes the text center horizontally */
+  text-align: center; /* makes the text center horizontally */
+ }
+
+
+}
