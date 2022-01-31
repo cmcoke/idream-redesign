@@ -2,8 +2,10 @@ import '../styles/styles.css'
 import 'lazysizes'
 import 'picturefill'
 import MobileMenu from './modules/MobileMenu'
+import FundersMarquee from './modules/FundersMarquee'
 
 new MobileMenu();
+new FundersMarquee();
 
 
 

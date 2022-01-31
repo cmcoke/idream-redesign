@@ -8,4 +8,7 @@
 @import "modules/_main-nav";
 @import "modules/_page-banner";
 @import "modules/_heading";
+@import "modules/_text-content";
+@import "modules/_site-footer";
+@import "modules/_funders";
 

@@ -1,0 +1,106 @@
+.funders{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 0;
+  
+  &__marquee{
+    position: relative;
+    width: 90vw;
+    height: auto;
+    overflow: hidden;
+
+    @mixin atSmall{
+      width: 80vw;
+    }
+
+    @mixin atMedium{
+      width: 70vw;
+    }
+
+    @mixin atLarge{
+      width: 60vw;
+    }
+
+    @mixin atXLarge{
+      width: 40vw;
+    }
+
+  }
+
+  &__marquee:before, &__marquee:after {
+    position: absolute;
+    top: 0;
+    width: 5rem;
+    height: 100%;
+    content: "";
+    z-index: 1;
+
+    @mixin atLarge{
+      width: 10rem;
+    }
+
+  }
+
+  &__marquee:before {
+    left: 0;
+    background: linear-gradient(to right, #fff 0%, transparent 100%);
+  }
+
+  &__marquee:after {
+    right: 0;
+    background: linear-gradient(to left, #fff 0%, transparent 100%);
+  }
+
+  &__logos{
+    height: 100%;
+    display: flex;
+    animation: scrolling 40s linear infinite;
+  }
+
+  @keyframes scrolling {
+
+    0%{
+      transform: translateX(0);
+    }
+
+    100%{
+      transform: translateX(-180vw); /* 9 (the total number of items) * 20vw (funders logos li width) = 180vw */
+    }
+
+  }
+
+  &__logos li{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40vw; 
+    flex-shrink: 0;
+    font-size: 3rem;
+    white-space: nowrap;
+
+
+    @mixin atSmall {
+      width: 20vw; /* 80vw (funders__marquee width) / 20vw (funders logos li width) = 4 (the number of items in the marquee area) */
+    }
+
+  }
+
+  &__logos li img{
+    max-width: 7rem;
+
+    @mixin atSmall{
+      max-width: 7rem;
+    }
+
+    @mixin atMedium{
+      max-width: 12rem;
+    }
+
+    @mixin atLarge{
+      max-width: 13rem;
+    }
+
+  }
+
+}

@@ -14,6 +14,8 @@ html, body {
   height: 100%;
 }
 
+
+
 article {
   min-height: 100%;
   display: grid;
@@ -41,4 +43,10 @@ ul {
 ::selection {
   background: #fce4ec;
   color: $clr-black;
+}
+
+
+/* this refers to funders logo marquee animation */
+:root {
+  --marquee-elements-displayed: 4;
 }

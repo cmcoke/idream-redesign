@@ -3,6 +3,13 @@ $ff-josefin: 'Josefin Sans', sans-serif;
 $ff-statisy: 'Satisfy', cursive;
 $ff-lora: 'Lora', serif;
 
+/* font size */
+$base-font-size: 1rem;
+
+/* line height */
+$base-line-height: 1.5;
+$header-line-height: 1.25;
+
 /* colors */
 $clr-crayola-violet: #973179;
 $clr-sky-blue: #74b5d2;
@@ -14,3 +21,4 @@ $clr-black: #2D2D2D;
 
 /* border radius */
 $radius: 0.2rem;
+

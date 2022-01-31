@@ -4,5 +4,23 @@
   &--banner{
     color: #fff;
   }
+
+  &__footer{
+    font-family: $ff-statisy;
+    text-align: center;
+  }
+
+  &__footer--white{
+    font-size: 22px;
+  }
+
+  &--blue{
+    color: $clr-sky-blue;
+  }
+
+  &__footer--funders{
+    font-size: clamp(1.875rem, 1vw + 1rem,  2.5rem);
+    margin-bottom: 8px;
+  }
   
 }

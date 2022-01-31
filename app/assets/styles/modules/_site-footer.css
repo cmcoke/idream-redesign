@@ -1,0 +1,91 @@
+.site-footer {
+  margin-top: 30px;
+ 
+  &__information {
+    background-color: $clr-crayola-violet;
+    color: #fff;
+    padding: 20px 0;
+  }
+
+
+  /* contains the mission statement, social media links & contact information  */
+  &__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(3, 8rem);
+    grid-template-areas:
+      "statement"
+      "social-media"
+      "contact-information";
+
+
+    @mixin atSmall {
+      grid-template-columns: repeat(3, 1fr) ;
+      grid-template-rows: 12rem;
+      gap: 0px 2rem;
+      grid-template-areas:
+        "statement social-media contact-information";
+    }
+    
+  }
+
+
+  /* mission statement */
+  &__statement {
+    grid-area: statement;
+    align-self: center;
+    font-family: $ff-josefin;
+    font-size: clamp(1.125rem, 1vw + 1rem, 1.3125rem);
+    line-height: 1.3;
+    text-align: center;
+    padding: 18px 0;
+    max-width: 330px;
+    margin: 0 auto;
+
+    @mixin atMedium {
+      text-align: left;
+      justify-self: center;
+      margin: 0;
+    }
+
+  }
+
+  /* social media links */
+  &__social-media {
+    grid-area: social-media;
+    align-self: center;
+    justify-self: center;
+  }
+
+  /* list of social media icons */
+  &__list {
+    display: flex;
+    gap: 0 1.7rem;
+
+    @mixin atLarge {
+      gap: 0 1.7rem;
+    }
+
+    @mixin atXLarge {
+      gap: 0 2.5rem;
+    }
+
+  }
+
+  /* contact information */
+  &__contact {
+    grid-area: contact-information;
+    align-self: center;
+    font-family: $ff-josefin;
+    font-size: clamp(0.9375rem, 1vw + .7rem, 1.25rem);
+    line-height: 1.3;
+    text-align: center;
+
+    @mixin atMedium {
+      text-align: left;
+      justify-self: center;
+    }
+
+  }
+
+}
