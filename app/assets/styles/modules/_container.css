@@ -13,10 +13,19 @@
     margin: 0 18%;
   }
 
-  &--narrow{
+  &--site-header{
+    margin: 0;
 
+    @mixin atMedium{
+      margin: 0 8%;
+    }
+  
+    @mixin atLarge{
+      margin: 0 12%;
+    }
+  
     @mixin atXLarge{
-      margin: 0 25%;
+      margin: 0 18%;
     }
 
   }

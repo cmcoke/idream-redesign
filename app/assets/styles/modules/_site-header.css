@@ -6,6 +6,7 @@
   right: 0;
   padding: 20px 0;
   z-index: 3;
+  background-color: #fff;
 
   @mixin atMedium {
     padding: 0;
@@ -13,30 +14,37 @@
 
   /* grid layout */
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-areas: "header__logo header__menu-icon"
-  "header__menu header__menu"
-  "header__menu header__menu"
-  "header__menu header__menu"
-  "header__menu header__menu";
+  grid-template-columns: 1rem repeat(2, 1fr) 1rem;
+  grid-template-areas: 
+  ". header__logo header__menu-icon ."
+  ". header__menu header__menu ."
+  ". header__menu header__menu ."
+  ". header__menu header__menu ."
+  ". header__menu header__menu .";
 
   @mixin atMedium {
-    grid-template-columns: repeat(8, 1fr);
+    grid-template-columns: 1rem repeat(8, 1fr);
     grid-template-areas:
-      "header__logo header__logo header__menu header__menu header__menu header__menu header__menu header__donate";
+      ". header__logo header__logo header__menu header__menu header__menu header__menu header__menu header__donate";
   }
 
+
+  @mixin atLarge {
+    grid-template-columns: 2rem repeat(8, 1fr);
+    grid-template-areas:
+      ". header__logo header__logo header__menu header__menu header__menu header__menu header__menu header__donate";
+  }
 
   /* organiztion' logo */
   &__logo {
     grid-area: header__logo;
-    align-self: end;
+    align-self: center;
     z-index: 7;
 
     & img {
       max-width: 10rem;
 
-      @mixin atXLarge {
+      @mixin atLarge {
         max-width: 13rem;
       }
 
@@ -115,7 +123,7 @@
   &__menu-span {
     grid-column: 1/2;
     z-index: 5;
-    color: #fff;
+    color: $clr-black;
     text-transform: uppercase;
     font-size: 14px;
   }
@@ -137,7 +145,7 @@
       right: 0;
       width: 33px;
       height: 3px;
-      background-color: #fff;
+      background-color: $clr-black;
       transition: transform 0.3s ease-out;
     }
 
@@ -148,7 +156,7 @@
       right: 0px;
       width: 33px;
       height: 3px;
-      background-color: #fff;
+      background-color: $clr-black;
       transition: transform 0.3s ease-out;
     }
   }

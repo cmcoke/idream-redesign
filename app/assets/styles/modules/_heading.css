@@ -1,6 +1,7 @@
 .heading{
   font-family: $ff-josefin;
   
+  
   &--banner{
     color: #fff;
   }

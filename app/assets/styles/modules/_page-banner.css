@@ -1,29 +1,43 @@
 .page-banner{
  position: relative;
  background-color: rgb(204, 201, 201);
- padding: 130px 0 233px 0;
+ /* padding: 130px 0 233px 0; */
  margin-bottom: 7rem;
 
  &--home{
 
   @mixin atMedium {
-    padding-bottom: 300px;
+    /* padding-bottom: 300px; */
   }
 
   @mixin atXLarge {
-    padding-bottom: 500px;
+    /* padding-bottom: 500px; */
   }
 
   @mixin atXXLarge {
-    padding-bottom: 700px;
+    /* padding-bottom: 700px; */
   }
 
  }
 
- /* &__bg-image{
-   
- } */
+ &__bg-image{
+   position: relative;
+   background-image: url('/assets/images/banner.jpg');
+   background-position: center;
+   background-size: cover;
+   background-repeat: no-repeat;
+   min-height: 650px;
+   /* min-height: 500px; */
 
+   @mixin atSmall{
+    background-attachment: fixed;
+   }
+ }
+
+
+ &__bg-image--home{
+  min-height: 800px;
+ }
 
  &__content{
   position: absolute;
@@ -36,3 +50,4 @@
 
 
 }
+

@@ -40,6 +40,11 @@ ul {
   margin: 0;
 }
 
+ol li{
+  /* font-family: $ff-lora;
+  font-size: 22px; */
+}
+
 ::selection {
   background: #fce4ec;
   color: $clr-black;
