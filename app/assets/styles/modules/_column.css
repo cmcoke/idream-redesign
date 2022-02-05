@@ -1,0 +1,33 @@
+.column{
+  margin-bottom: 8rem;
+
+  @media (min-width: 768px){
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0 3rem;
+  }
+
+
+  @mixin atMedium{
+    grid-gap: 0 5rem;
+  }
+
+  /* image */
+  &__image{
+    
+    @media (min-width: 768px){
+      grid-column: 1/2;
+    }
+
+  }
+
+
+  &__text-content{
+
+    @media (min-width: 768px){
+      grid-column: 2/3;
+    }
+
+  }
+
+}
