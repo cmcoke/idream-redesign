@@ -30,4 +30,14 @@
 
   }
 
+
+  &--profile{
+    
+    @media (min-width: 2126px){
+      margin: 0 24%;
+    }
+
+
+  }
+
 }

@@ -1,0 +1,75 @@
+.profile{
+
+  @mixin atMedium{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-gap: 0 2rem;
+  }
+
+  /* image */
+  &__image{
+    border-radius: 80px;
+    overflow: hidden;
+    width: 160px;
+    height: 160px;
+    margin: 0 auto;
+
+    @mixin atMedium{
+      
+    }
+
+  }
+
+
+  /* name, role, team */
+  &__information{
+
+    @mixin atMedium{
+      
+    }
+
+  }
+
+
+  /* name */
+  &__name{
+    margin-bottom: 0;
+    text-align: center;
+
+    @mixin atMedium{
+      text-align: left;
+    }
+
+  }
+
+
+  /* role */
+  &__role{
+    margin-top: 7px;
+    margin-bottom: 0;
+    text-align: center;
+    color: rgb(141, 141, 141);
+
+    @mixin atMedium{
+      text-align: left;
+    }
+
+  }
+
+
+  /* team */
+  &__team{
+    margin-top: 7px;
+    text-align: center;
+    color: rgb(141, 141, 141);
+
+    @mixin atMedium{
+      text-align: left;
+    }
+
+  }
+
+
+
+
+}
