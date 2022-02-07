@@ -3,9 +3,11 @@ import 'lazysizes'
 import 'picturefill'
 import MobileMenu from './modules/MobileMenu'
 import FundersMarquee from './modules/FundersMarquee'
+import Accordion from './modules/Accordion'
 
 new MobileMenu();
 new FundersMarquee();
+new Accordion();
 
 
 

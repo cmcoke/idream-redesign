@@ -1,0 +1,113 @@
+.accordion {
+  font-family: $ff-josefin;
+  margin-bottom: 40px;
+
+  &--animated {
+    transition: transform .3s;
+  }
+
+
+  &__sub {
+    display: none;
+    overflow: hidden;
+  }
+
+  &__sub--is-visible {
+    display: block;
+  }
+
+  &__item {
+    user-select: none;
+  }
+
+
+  &__item p {
+    color: hsl(218,  7%,  32%);
+    line-height: 1.7;
+    padding: 0 1rem;
+
+    @mixin atSmall{
+      padding: 0 4rem;
+    }
+  }
+
+
+  &__input {
+    position: absolute;
+    opacity: 0;
+  }
+
+
+  &__main-label{
+    font-size: 1.7rem;
+  }
+
+  &__sub-label{
+    /* font-size: 17px; */
+  }
+
+  &__label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 0.75em 1.25em;
+    border: 1px solid hsl(0, 0%, 83%);
+    color: $clr-black;
+    cursor: pointer;
+  }
+
+
+  &__input:checked+&__label::before {
+    transform: rotate(0);
+  }
+
+  &__input:checked+&__label::after {
+    background-position: -32px 0;
+  }
+
+  &__input:checked~&__sub {
+    display: block;
+  }
+
+  &__sub--l1 &__label {
+    padding-left: calc(1.25em + 16px);
+    transition: background-color 200ms ease-in-out;
+  }
+
+  &__sub--l1 &__label:hover {
+    background-color: #fce4ec;
+  }
+
+  &__item:last-child &__label {
+    box-shadow: none;
+  }
+
+  &__sub--l2 &__label {
+    padding-left: calc(1.5em + 32px);
+  }
+
+  &__sub--l3 &__label {
+    padding-left: calc(1.5em + 48px);
+  }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
