@@ -11,6 +11,7 @@
 @import "modules/_text-content";
 @import "modules/_site-footer";
 @import "modules/_funders";
+@import "modules/_accordion";
 @import "modules/_profile";
 @import "modules/_column";
 @import "modules/_video";
