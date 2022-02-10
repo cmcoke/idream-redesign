@@ -4,6 +4,7 @@
   align-items: center;
   padding: 40px 0;
   
+
   &__marquee{
     position: relative;
     width: 90vw;
