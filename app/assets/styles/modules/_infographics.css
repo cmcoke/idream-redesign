@@ -1,0 +1,14 @@
+.infographics{
+  margin-top: 2rem;
+
+  @mixin atSmall{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+  }
+
+  @mixin atMedium{
+    margin-top: 4rem;
+  }
+
+}
