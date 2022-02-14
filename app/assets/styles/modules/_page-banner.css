@@ -5,6 +5,7 @@
  margin-bottom: 7rem;
 
  &--home{
+  
 
   @mixin atMedium {
     /* padding-bottom: 300px; */
@@ -23,20 +24,32 @@
  &__bg-image{
    position: relative;
    background-image: url('/assets/images/banner.jpg');
-   background-position: center;
+   background-position: center center;
    background-size: cover;
    background-repeat: no-repeat;
    min-height: 650px;
-   /* min-height: 500px; */
 
    @mixin atSmall{
     background-attachment: fixed;
    }
+
+   
  }
 
 
  &__bg-image--home{
-  min-height: 800px;
+  background-image: url('/assets/images/home-page-banner-mobile.jpg');
+  background-attachment:scroll;
+
+    @mixin atSmall{
+      background-image: url('/assets/images/home-page-banner-tablet.jpg');
+    }
+
+    @mixin atLarge{
+      background-image: url('/assets/images/home-page-banner-desktop.jpg');
+      min-height: 1400px;
+    }
+
  }
 
  &__content{
