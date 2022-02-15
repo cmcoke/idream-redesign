@@ -46,7 +46,7 @@
     }
 
     @mixin atSmall{
-      background-image: url('/assets/images/hero.jpg');
+      background-image: url('/assets/images/hero4.jpg');
       min-height: 1200px;
     }
 
