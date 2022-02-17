@@ -4,6 +4,8 @@
   
   &--banner{
     color: #fff;
+    font-size: clamp(2.5rem, 1vw + 3rem, 4rem);
+    line-height: 1;
   }
 
   &__footer{
