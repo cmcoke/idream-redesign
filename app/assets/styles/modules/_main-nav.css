@@ -1,6 +1,6 @@
 .main-nav {
 
-  @media (max-width: 1023px) { /* 991x = 61.9375em */
+  @media (max-width: 63.9375em) { /* 61.9375em = 1023px */
     position: relative;
     height: 70%;
     height: 60%;
@@ -52,7 +52,7 @@
       padding: .6rem 0;  
     }
 
-    @media (min-width: 56.25em) { /* 900px = 56.25em */
+    @media (min-width: 1024px) { /* 900px = 56.25em */
       padding: .6rem;
       cursor: pointer;
 
@@ -130,7 +130,7 @@
       transition: all 200ms ease-in-out;
     }
 
-    @media (max-width: 61.9375em) { /* 61.9375em = 991px */
+    @media (max-width: 63.9375em) { /* 61.9375em = 1023px */
       max-height: 0;
       overflow: hidden;
       width: 15rem;

@@ -1,8 +1,10 @@
 .profile{
+  margin-top: 20px;
 
   @mixin atMedium{
     display: grid;
     grid-template-columns: 1fr;
+    
   }
 
   /* image */
@@ -73,5 +75,16 @@
 
   }
 
+
+  &__linkedin{
+    text-align: center;
+    margin-top: 10px;
+
+    & a{
+      font-family: $ff-josefin;
+      font-size: 18px;
+      color: $clr-sky-blue;
+    }
+  }
 
 }
