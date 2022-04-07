@@ -1,0 +1,58 @@
+.connect{
+
+  @mixin atSmall{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 11rem;
+  }
+
+
+  /* map */
+  &__map{
+    text-align: center;
+
+    @mixin atSmall{
+      grid-row: 1/2;
+      grid-column: 1/4;
+      text-align: left;
+    }
+
+  }
+
+  &__map-image{
+    display: none;
+
+    @mixin atSmall{
+      display: block;
+    }
+
+  }
+
+  &__map-address{
+    padding: 0 10px;
+  }
+
+
+  &__social-media, &__telephone, &__volunteer{
+    text-align: center;
+    margin-top: 20px;
+  }
+
+
+  & ul li{
+    margin-bottom: 11px;
+  }
+
+  & ul li a{
+    font-family: $ff-josefin;
+    color: $clr-black;
+    transition: all 200ms ease-in-out;
+    
+    &:hover{
+      color: $clr-crayola-violet;
+    }
+  }
+
+ 
+
+}
