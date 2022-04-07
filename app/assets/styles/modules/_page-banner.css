@@ -52,7 +52,7 @@
  }
 
  &__bg-image--black-mamas-glowing{
-  background-image: linear-gradient(rgba(20, 20, 20, 0.527),rgba(0, 0, 0, 0.2)), url('/assets/images/black-mamas-glowing-hero-image.png');
+  background-image: linear-gradient(rgba(20, 20, 20, 0.527),rgba(0, 0, 0, 0.2)), url('/assets/images/black-mamas-glowing-hero-image-min.png');
  }
 
  &__content{
