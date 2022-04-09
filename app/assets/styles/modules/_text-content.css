@@ -47,5 +47,14 @@
   & b{
     color: black;
   }
+
+  &--link{
+    
+    margin-bottom: 40px;
+
+    & p{
+      margin-bottom: 0;
+    }
+  }
  
 }
