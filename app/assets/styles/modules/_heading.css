@@ -19,6 +19,7 @@
 
   &--blue{
     color: $clr-sky-blue;
+    margin-top: 50px;
   }
 
   &__profile{

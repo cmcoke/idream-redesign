@@ -54,6 +54,34 @@ ol li{
 }
 
 
+.img-width{
+  width: 100%;
+
+  @mixin atSmall{
+    width: 60%;
+  }
+
+  @mixin atMedium{
+    width: 45%;
+  }
+
+}
+
+.img-center{
+  text-align: center;
+
+  & img {
+
+    @mixin atSmall{
+      width: 70%;
+    }
+
+    @mixin atMedium{
+      width: 60%;
+    }
+  }
+}
+
 
 ::selection {
   background: #fce4ec;

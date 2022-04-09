@@ -104,7 +104,7 @@
     }
 
     @mixin atXLarge {
-      font-size: clamp(0.9375rem, 1vw + .2rem, 1.0625rem);
+      /* font-size: clamp(0.9375rem, 1vw + .2rem, 1.0625rem); */
     }
 
   }
@@ -146,7 +146,8 @@
     padding: 0.5rem 0rem;
 
     @media (min-width: 1024px) { /* 900px = 48em */
-      padding: 0.4rem 1.2rem;
+      /* padding: 0.4rem 1.2rem; */
+      padding: 0.4rem 1.1rem;
       border-radius: $radius;
       transition: background-color 200ms ease-in-out;
 
