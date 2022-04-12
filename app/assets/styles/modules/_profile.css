@@ -36,6 +36,11 @@
   }
 
 
+  &__bio-pop-up{
+    text-align: center;
+  }
+
+
   /* team */
   &__team{
     margin-top: 7px;

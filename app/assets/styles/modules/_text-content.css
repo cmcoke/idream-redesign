@@ -65,4 +65,12 @@
     font-size: 17px;
   }
 
+  &--modal{
+    cursor: pointer;
+    border: none;
+    outline: none;
+    background: none;
+    color: $clr-sky-blue;
+  }
+
 }
