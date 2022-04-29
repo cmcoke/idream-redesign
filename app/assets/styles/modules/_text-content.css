@@ -73,4 +73,11 @@
     color: $clr-sky-blue;
   }
 
+  &--404{
+    max-width: 600px;
+    margin: 0 auto;
+    font-size: clamp(1.1875rem, 1vw + 1rem, 1.375rem);
+  }
+
+
 }

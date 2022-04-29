@@ -36,5 +36,16 @@
     margin-bottom: 1.5rem;
     margin-top: 4rem;
   }
+
+  &--404{
+    color: #fff;
+    font-size: clamp(4rem, 1vw + 7rem, 11rem);
+    margin-bottom: 0;
+  }
+
+  &--404-message{
+    color: #fff;
+    margin-top: 0;
+  }
   
 }
